@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+:root {
+  --bg-color: #1a1a1a;
+  --display-color: #333;
+  --button-color: #4d4d4d;
+  --operation-color: #ff9500;
+  --scientific-color: #5c5c5c;
+  --hover-color: #737373;
+  --text-color: white;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: var(--text-color);
+}
+
+.calculator {
+  width: 400px;
+  background-color: var(--bg-color);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.calculator-title {
+  text-align: center;
+  padding: 15px 0;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: var(--text-color);
+  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.display {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: var(--display-color);
+  padding: 20px;
+  text-align: right;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.previous-operand {
+  font-size: 1.2rem;
+  opacity: 0.7;
+  min-height: 24px;
+  word-wrap: break-word;
+}
+
+.current-operand {
+  font-size: 2.5rem;
+  word-wrap: break-word;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  padding: 10px;
+  background-color: var(--bg-color);
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  height: 60px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: var(--button-color);
+  color: var(--text-color);
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: var(--hover-color);
+}
+
+button[data-operation] {
+  background-color: var(--operation-color);
+  font-size: 2rem;
+}
+
+button[data-operation]:hover {
+  background-color: #ffaa33;
+}
+
+button[data-scientific] {
+  background-color: var(--scientific-color);
+  font-size: 1rem;
+}
+
+button[data-scientific]:hover {
+  background-color: var(--hover-color);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.toggle-scientific {
+  width: 100%;
+  padding: 15px;
+  background-color: #333;
+  border: none;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.toggle-scientific:hover {
+  background-color: #444;
+}
+
+.hidden {
+  display: none;
+}

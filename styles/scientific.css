@@ -1,0 +1,31 @@
+.calculator.scientific-mode {
+  width: 700px; 
+}
+
+.calculator.scientific-mode .buttons-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.calculator.scientific-mode .basic-buttons {
+  flex: 1;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 10px;
+}
+
+.calculator.scientific-mode .scientific-buttons {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 10px;
+}
+
+.calculator.scientific-mode .toggle-scientific {
+  background-color: var(--operation-color);
+  color: var(--bg-color);
+}
+
+.calculator.scientific-mode .toggle-scientific:hover {
+  background-color: #ffaa33;
+}
